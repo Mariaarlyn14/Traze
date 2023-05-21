@@ -1,0 +1,197 @@
+<SellerHomepage>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+    
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+
+            MDLabel:
+                text: "List of Customers"
+                font_size: "20sp"
+                pos_hint: {"x": 0.05, "y": 0.05}
+                color: rgba (255, 255, 255, 250)
+
+
+            MDIconButton:
+                icon: "account-circle"
+                pos_hint:{"x": 0.8, "y": 0.05}
+                user_font_size: "15sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "ProfilePage_Seller"
+                    root.manager.transition.direction = 'left'
+        FloatLayout:
+            orientation: "vertical"
+            size_hint: 0.7, 0.8
+            pos_hint:{"x": 0.5, "y": 0.7}
+            ScrollView:
+            MDList:
+                id: cust_list
+
+        FloatLayout:
+            MDIconButton:
+                icon: "plus-circle-outline"
+                pos_hint:{"x": 0.65, "y": 0.1}
+                icon_size: "50sp"
+                text_color: rgba (0, 0, 0, 1)
+                on_release:
+                    app.root.current = "Add_Customer"
+
+<Customer_Info>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+        
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint:{"x": 0.03, "y": 0.05}
+                user_font_size: "15sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "SellerHomepage"
+                    root.manager.transition.direction = 'right'
+
+            MDLabel:
+                text: "Customer"
+                font_size: "20sp"
+                pos_hint: {"x": 0.2, "y": 0.05}
+                color: rgba (255, 255, 255, 250)
+
+
+        FloatLayout:
+            size_hint: 0.7, 0.8
+            id: tracking_info_layout
+
+<ProfilePage_Seller>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+    
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+   
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint:{"center_y": 0.5}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "SellerHomepage"
+                    root.manager.transition.direction = 'right'
+
+        MDRaisedButton:
+            text: "Log Out"
+            md_bg_color: 0, 0, 0, 1
+            font_size: "12sp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.15}
+            text_color: rgba(255, 255, 255, 255)
+            on_press:
+                root.logout()
+            on_release:
+                app.root.current = "fScreen"
+
+<Add_Customer>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+    
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+   
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint:{"center_y": 0.5}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "SellerHomepage"
+                    root.manager.transition.direction = 'right'
+
+            MDLabel:
+                text: "ADD CUSTOMER"
+                font_size: "20sp"
+                pos_hint: {"x": 0.15, "center_y": 0.5}
+                color: rgba (255, 255, 255, 250)
+
+        MDTextField:
+            id: cust_name
+            hint_text: "Name of Customer"
+            required: True
+            size_hint: 0.7, 0.12
+            pos_hint: {"x": 0.15, "y": 0.75}
+
+        MDTextField:
+            id: cust_phone
+            hint_text: "Customer Phone No."
+            required: True
+            size_hint: 0.7, 0.12
+            pos_hint: {"x": 0.15, "y": 0.67}
+
+        MDTextField:
+            id: item_name
+            hint_text: "Item Name"
+            required: True
+            size_hint: 0.7, 0.12
+            pos_hint: {"x": 0.15, "y": 0.59}
+    
+        MDTextField:
+            id: cust_addr
+            hint_text: "Customer Address"
+            required: True
+            size_hint: 0.7, 0.12
+            pos_hint: {"x": 0.15, "y": 0.51}
+
+        MDTextField:
+            id: pu_addr
+            hint_text: "Pick-up Address"
+            required: True
+            size_hint: 0.7, 0.12
+            pos_hint: {"x": 0.15, "y": 0.43}
+    
+        MDTextField:
+            id:date_order
+            hint_text: "Date of Order"
+            required: True
+            size_hint: 0.7, 0.12
+            pos_hint: {"x": 0.15, "y": 0.35}
+
+        MDLabel:
+            text: "Category:"
+            size_hint: .8, .1
+            font_size: "17sp"
+            pos_hint : {"x":0.15, "y":0.28}
+
+        Spinner:
+            id: category
+            size_hint: 0.44, 0.06
+            pos_hint: {"x":0.42, "y":0.30}
+            required: True
+            text: 'Category'
+            values: ['Perishable', 'Non-Perishable']
+            background_color: 255, 255, 255, 4
+            color: 0, 0, 0, 1
+            sync_height: True
+            on_text:
+
+        MDRaisedButton:
+            text: "Add"
+            md_bg_color: "black"
+            size_hint: 0.3, 0.08
+            pos_hint:{"center_x": 0.5, "y": 0.15}
+            on_press:
+                root.AddCustomer_btn()
+            on_release:
+                app.root.current = 'SellerHomepage'
+            

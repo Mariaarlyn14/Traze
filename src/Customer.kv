@@ -1,0 +1,138 @@
+<CustomerHomepage>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+    
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+
+            MDLabel:
+                text: "Your Parcels"
+                font_size: "20sp"
+                pos_hint: {"x": 0.05, "y": 0.05}
+                color: rgba (255, 255, 255, 250)
+
+            MDIconButton:
+                icon: "account-circle"
+                pos_hint:{"x": 0.8, "y": 0.05}
+                icon_size: "27sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "ProfilePage_Customer"
+                    root.manager.transition.direction = 'left'
+
+        FloatLayout:
+            orientation: "vertical"
+            size_hint: 0.7, 0.8
+            #pos_hint:{"x": 0.5, "y": 0.22}
+            ScrollView:
+            MDList:
+                id: tracking_list
+        
+        FloatLayout:
+            MDIconButton:
+                icon: "plus-circle-outline"
+                pos_hint:{"x": 0.65, "y": 0.1}
+                icon_size: "50sp"
+                text_color: rgba (0, 0, 0, 1)
+                on_release:
+                    app.root.current = 'ContentAdd'
+
+<Tracking_Info>:
+    FloatLayout:
+        md_bg_color: 246, 250, 255, 255
+
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+        
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint:{"x": 0.03, "y": 0.05}
+                user_font_size: "15sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "CustomerHomepage"
+                    root.manager.transition.direction = 'right'
+
+            MDLabel:
+                text: "Tracking"
+                font_size: "20sp"
+                pos_hint: {"x": 0.2, "y": 0.05}
+                color: rgba (255, 255, 255, 250)
+
+        FloatLayout:
+            size_hint: 0.7, 0.8
+            id: tracking_info_layout
+
+<ProfilePage_Customer>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+    
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+   
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint:{"center_y": 0.5}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "CustomerHomepage"
+                    root.manager.transition.direction = 'right'
+        
+        MDRaisedButton:
+            text: "Log Out"
+            md_bg_color: 0, 0, 0, 1
+            font_size: "12sp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.15}
+            text_color: rgba(255, 255, 255, 255)
+            on_press:
+                root.logout()
+            on_release:
+                app.root.current = "fScreen"
+
+<ContentAdd>:
+    MDFloatLayout:
+        md_bg_color: 246, 250, 255, 255
+    
+        ProfileCard:
+            size_hint_y: 0.1
+            pos_hint: {"center_y": .95}
+            md_bg_color: 0, 0, 0, 1
+   
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint:{"center_y": 0.5}
+                user_font_size: "20sp"
+                theme_text_color: "Custom"
+                text_color: rgba (255, 255, 255, 250)
+                on_release:
+                    app.root.current = "CustomerHomepage"
+                    root.manager.transition.direction = 'right'
+
+        MDTextField:
+            id: track_trackingID
+            hint_text: "Tracking No:"
+            helper_text: "Enter Your Tracking No"
+            mode: "fill"
+            fill_color: 0, 0, 0, 0.5
+            size_hint: 0.6, 0.25
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+
+        MDRaisedButton:
+            text: "Track"
+            md_bg_color: "black"
+            size_hint: 0.2, 0.08
+            pos_hint:{"center_x": 0.5, "y": 0.42}
+            on_press: 
+                root.track_btn()
+            on_release:
+                app.root.current = "CustomerHomepage"
