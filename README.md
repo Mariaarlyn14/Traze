@@ -15,7 +15,7 @@ Each one of the objectives were successfully achieved and tackled.
 
 <h2>App Installation Process</h2>
   
-  1. Download Traze (".apk") in the **[dist folder](https://github.com/Mariaarlyn14/Traze/blob/main/dist/Traze.apk)** or using this **[link](https://drive.google.com/file/d/1JDvw4AGQyV0Vh0qQLcl3jGebb22NVf2T/view?usp=share_link)**.
+  1. Download Traze (".apk") in the using this **[link](https://github.com/Mariaarlyn14/Traze/releases/latest/download/Traze.apk)**.
   2. Install the Traze Application in your **Android** device.
   3. Go the **"App info"** and make sure to turn on the **Permission for Files and Media**.
   4. Use the app
@@ -29,7 +29,8 @@ Setting Up the Algorithm
       
 3. Download the database [("test2.db")](https://github.com/Mariaarlyn14/Traze/blob/main/db/DataLocation.db) to access the necessary Data for the algorithm to work.
 4. Run the algorithm.
-5. Upon executing the code, you will obtain two HTML files, namely "Dijkstra.html" and "ACO.html". These files can be conveniently downloaded and stored on your mobile device to use for the application.
+5. Upon executing the code, you must first manually input the Origin and Destination which you can obtain in the Delivery Information Page.
+6. After successfully running the algorithm, you will obtain two HTML files, namely "Dijkstra.html" and "ACO.html". These files can be conveniently downloaded and stored on your mobile device to use for the application.
 
 
 Make use of this [Google Collab Python Notebook](https://colab.research.google.com/drive/1dSIbjAXhbsRaO5O8azrfq-hAqGfk0whj?usp=sharing), created with the intention of improving the efficiency and ease of running algorithms for our users.
