@@ -23,14 +23,10 @@ Each one of the objectives were successfully achieved and tackled.
 Setting Up the Algorithm
 -----
 1. Install python IDE and python3.
-2. Install the libraries needed by the algorithm to run.
-
-      >Use pip install -r [requirements.txt](https://github.com/Mariaarlyn14/Traze/blob/main/requirements.txt) in the command line.
-      
-3. Download the database [("test2.db")](https://github.com/Mariaarlyn14/Traze/blob/main/db/DataLocation.db) to access the necessary Data for the algorithm to work.
-4. Run the algorithm.
-5. Upon executing the code, you must first manually input the Origin and Destination which you can obtain in the Delivery Information Page.
-6. After successfully running the algorithm, you will obtain two HTML files, namely "Dijkstra.html" and "ACO.html". These files can be conveniently downloaded and stored on your mobile device to use for the application.
+2. Download the **[setup.bat](https://github.com/Mariaarlyn14/Traze/releases/latest/download/setup.bat)** and run from your command line to automatically clone the repository and install the needed libaries.
+3. Run the algorithms (Dijkstra.py) and (ACO.py).
+4. Upon executing the code, you must first manually input the Origin and Destination which you can obtain in the Delivery Information Page.
+5. After successfully running the algorithm, you will obtain two HTML files, namely "Dijkstra.html" and "ACO.html". These files can be conveniently downloaded and stored on your mobile device to use for the application.
 
 
 Make use of this [Google Collab Python Notebook](https://colab.research.google.com/drive/1dSIbjAXhbsRaO5O8azrfq-hAqGfk0whj?usp=sharing), created with the intention of improving the efficiency and ease of running algorithms for our users.
@@ -41,5 +37,6 @@ Folders
 
 /assets - contains Logo of the Android Application.</br>
 /db - contains the Location database needed for the algorithm.</br>
+/docs -contains the User-manual and Thesis Manuscript
 /dist - contains the Android Application.</br>
 /src - contains the source code for both Backend and Frontend.</br>
