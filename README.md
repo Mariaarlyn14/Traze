@@ -23,7 +23,7 @@ Each one of the objectives were successfully achieved and tackled.
 Setting Up the Algorithm
 -----
 1. Install python IDE and python3.
-2. Download the **[setup.bat](https://github.com/Mariaarlyn14/Traze/releases/latest/download/setup.bat)** and run from your command line to automatically clone the repository and install the needed libaries.
+2. Download the **[setup.bat](https://github.com/Mariaarlyn14/Traze/releases/latest/download/setup.bat)**, save it in a separate folder and run the ".bat" file to automatically clone the repository and install the needed libaries.
 3. Run the algorithms (Dijkstra.py) and (ACO.py).
 4. Upon executing the code, you must first manually input the Origin and Destination which you can obtain in the Delivery Information Page.
 5. After successfully running the algorithm, you will obtain two HTML files, namely "Dijkstra.html" and "ACO.html". These files can be conveniently downloaded and stored on your mobile device to use for the application.
