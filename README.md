@@ -37,6 +37,6 @@ Folders
 
 /assets - contains Logo of the Android Application.</br>
 /db - contains the Location database needed for the algorithm.</br>
-/docs -contains the User-manual and Thesis Manuscript
+/docs -contains the User-manual and Thesis Manuscript.</br>
 /dist - contains the Android Application.</br>
 /src - contains the source code for both Backend and Frontend.</br>
